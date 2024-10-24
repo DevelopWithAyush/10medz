@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import PharmacistDashboard from "./pages/pharmacist/PharmacistDashboard";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Prescription from "./pages/pharmacist/Prescription";
+import Home from "./pages/user/Home";
+import UploadPrescription from "./pages/user/UploadPrescription";
+import { Account } from "./assets/image";
+import AccountProfile from "./pages/user/AccountProfile";
+import OrderStatus from "./pages/user/OrderStatus";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/status" element={<OrderStatus />} />
+          <Route path="/account" element={<AccountProfile />} />
+          <Route path="/prescription" element={<UploadPrescription />} />
+          <Route path="/prescription/:id" element={<Prescription />} />
+          <Route path="/pharmacist" element={<PharmacistDashboard />} />
+          <Route path="/pharmacist/:id" element={<Prescription />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
-}
+};
 
 export default App;
