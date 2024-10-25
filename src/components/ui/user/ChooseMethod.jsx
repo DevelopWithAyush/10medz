@@ -1,5 +1,6 @@
 import React from "react";
 import { CameraImage, GalleryImage, RxPage } from "../../../assets/image";
+import { Link } from "react-router-dom";
 
 const ChooseMethod = () => {
   return (
@@ -12,11 +13,12 @@ const ChooseMethod = () => {
       </p>
       <div className="flex w-full flex-col items-start justify-start gap-5">
         <Card
+          url={"/prescription/camera"}
           Image={CameraImage}
           name={"Camera"}
           description={"Take a picture of your prescription."}
         />
-        <Card
+        <Card 
           Image={GalleryImage}
           name={"Gallery"}
           description={"Pick a prescription from your phone storage."}
@@ -31,9 +33,9 @@ const ChooseMethod = () => {
   );
 };
 
-const Card = ({ Image, name, description }) => {
+const Card = ({url, Image, name, description }) => {
   return (
-    <div className="w-full flex flex-row gap-4 items-center justify-start py-[10px] px-5 border-[1px] border-solid border-[#BCC3CD] rounded-[10px]">
+    <Link to={url} className="w-full flex flex-row gap-4 items-center justify-start py-[10px] px-5 border-[1px] border-solid border-[#BCC3CD] rounded-[10px]">
       <Image />
       <div className="flex flex-col items-start justify-start">
         <p className="text-primary text-[16px] font-psemibold_600">{name}</p>
@@ -42,7 +44,7 @@ const Card = ({ Image, name, description }) => {
           {description}
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 
