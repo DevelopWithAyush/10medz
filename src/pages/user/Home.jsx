@@ -7,6 +7,7 @@ import CashBack from "../../components/ui/user/CashBack";
 import PhoneTabs from "../../components/ui/user/PhoneTabs";
 import Header from "../../components/shared/user/Header";
 import HeroSection from "../../components/shared/user/HeroSection";
+import Login from "../../components/shared/user/Login";
 
 const Home = () => {
   return (
@@ -22,7 +23,7 @@ const PhoneSection = () => {
     <main className="flex flex-col sm:hidden">
       <PhoneHeader />
       <Search className={"mt-[70px] md:hidden"} />
-      <UploadPrescription />
+      <UploadPrescription  className={"mt-6 "}/>
       <Deals />
       <CashBack />
       <PhoneTabs />
@@ -34,6 +35,7 @@ const PhoneSection = () => {
 const DesktopSection = () => {
   return (
     <main className="hidden sm:flex flex-col ">
+      
       <Header />
       <HeroSection />
     </main>

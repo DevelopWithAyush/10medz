@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import PharmacistDashboard from "./pages/pharmacist/PharmacistDashboard";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Prescription from "./pages/pharmacist/Prescription";
@@ -9,12 +9,17 @@ import AccountProfile from "./pages/user/AccountProfile";
 import OrderStatus from "./pages/user/OrderStatus";
 import CameraCapture from "./pages/user/CameraCapture";
 import Wapper from "./components/shared/user/Wapper";
+import Login from "./components/shared/user/Login";
+import { HandleContext } from "./hooks/HandleState";
 
 const App = () => {
+  const { openLoginModal, wapper, setOpenLoginModal } =
+    useContext(HandleContext);
   return (
     <>
       <BrowserRouter>
-      <Wapper/>
+        {openLoginModal && <Login />}
+        {wapper && <Wapper />}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/status" element={<OrderStatus />} />

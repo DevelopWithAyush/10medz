@@ -3,7 +3,7 @@ import Prescription from '../../../assets/image/RxImage.png'
 import { Link } from 'react-router-dom'
 const UploadPrescription = ({className}) => {
   return (
-    <div className={`flex  flex-col items-start justify-start px-5  mt-6 ${className}`} >
+    <div className={`flex  flex-col items-start justify-start px-5     ${className}`} >
       <div className='flex flex-col items-start justify-start p-4 border-[1px] border-solid bg-white border-[#DFE7F2] w-full rounded-[10px] gap-[26.25px] sm:gap-[44px] '
         style={{ boxShadow: "0px 4px 5px 0px rgba(255, 233, 192, 0.40)"}}
       >

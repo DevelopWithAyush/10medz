@@ -1,6 +1,7 @@
 import React from "react";
 import { CameraImage, GalleryImage, RxPage } from "../../../assets/image";
 import { Link } from "react-router-dom";
+import PreviousPerscription from "./PreviousPerscription";
 
 const ChooseMethod = () => {
   return (
@@ -29,6 +30,7 @@ const ChooseMethod = () => {
           description={"Your prescriptions from the previous uploads."}
         />
       </div>
+      {/* <PreviousPerscription/> */}
     </div>
   );
 };
