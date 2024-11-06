@@ -73,8 +73,8 @@ const CameraCapture = () => {
       </header>
 
       <div
-        className="relative  w-full mt-[57px] max-h-[calc(100%-160px)]  z-20  bg-black overflow-hidden rounded-lg shadow-lg"
-        style={{ aspectRatio: 3 / 4 }}
+        className="relative  w-full mt-[57px] h-[calc(100%-160px)]  z-20  bg-black overflow-hidden rounded-lg shadow-lg"
+        style={{ aspectRatio: 9 /16 }}
       >
         <video
           ref={videoRef}
