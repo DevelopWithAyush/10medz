@@ -20,10 +20,10 @@ const Home = () => {
 
 const PhoneSection = () => {
   return (
-    <main className="flex flex-col sm:hidden">
+    <main className="flex flex-col xl:hidden">
       <PhoneHeader />
-      <Search className={"mt-[70px] md:hidden"} />
-      <UploadPrescription  className={"mt-6 "}/>
+      <Search className={"mt-[70px] xl:hidden"} />
+      <UploadPrescription  className={"mt-6  "}/>
       <Deals />
       <CashBack />
       <PhoneTabs />
@@ -34,7 +34,7 @@ const PhoneSection = () => {
 
 const DesktopSection = () => {
   return (
-    <main className="hidden sm:flex flex-col ">
+    <main className="hidden xl:flex flex-col ">
       
       <Header />
       <HeroSection />

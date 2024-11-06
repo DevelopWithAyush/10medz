@@ -74,3 +74,16 @@ html::-webkit-scrollbar-thumb {
   background: #fe5b00;
   border-radius: 1rem;
 }
+
+.opt-container {
+  @apply flex justify-between ;
+}
+
+.opt-container input {
+display:  flex ;
+flex-direction: column ;
+align-items: center ;
+justify-content: center ;
+padding: 12px 28px;
+   /* flex py-8 px-7 outline-[#FE6903] bg-[#FE6903] bg-opacity-15 rounded-lg text-[28px]   ; */
+}

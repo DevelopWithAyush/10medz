@@ -17,7 +17,7 @@ const Deals = () => {
           Deals on curated product
         </p>
         <Link to={"/"} className="text-[12px] font-psemibold_600 text-primary">
-          view all
+          View all
         </Link>
       </div>
       <div className="">

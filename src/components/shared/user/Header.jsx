@@ -39,12 +39,12 @@ const Header = () => {
           <div className="flex flex-row items-center gap-[48px]">
             {userExist ? (
               <>
-                <div className="flex flex-col items-center justify-center">
+                <Link to={"/cart"} className="flex flex-col items-center justify-center">
                   <Cart />
                   <p className="text-[#0F172A] text-[12px] font-pregular_400">
                     Cart
                   </p>
-                </div>
+                </Link>
                 <div className="flex flex-col items-center justify-center">
                   <Account />
                   <p className="text-[#0F172A] text-[12px] font-pregular_400">
